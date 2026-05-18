@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Michael E. Wright, PhD — Wright Lab">
+  <main class="page wide">
+    <span class="section-eyebrow">Principal Investigator</span>
+
+    <div class="pi-header">
+      <div class="pi-portrait">
+        <img src="/images/michael-wright.jpg" alt="Michael E. Wright, PhD" />
+      </div>
+      <div class="pi-intro">
+        <h1>Michael E. Wright, PhD</h1>
+        <p class="lead">
+          Associate Professor &middot; Department of Molecular
+          Physiology and Biophysics
+        </p>
+        <p class="muted">University of Iowa &middot; Carver College of Medicine</p>
+        <p>
+          <a href="mailto:michael-e-wright@uiowa.edu">michael-e-wright@uiowa.edu</a> &middot;
+          319-384-1764
+        </p>
+      </div>
+    </div>
+
+    <div class="pi-body">
+      <h2>About</h2>
+      <p>
+        Michael E. Wright, PhD, is an Associate Professor in the Department of Molecular
+        Physiology and Biophysics at the University of Iowa
+        Carver College of Medicine. He earned his PhD in Molecular and Cellular Biology from
+        the University of Washington in Seattle, and completed postdoctoral training in
+        quantitative mass spectrometry and systems biology at the Institute for Systems Biology
+        in the laboratory of Ruedi Aebersold. He joined the University of Iowa faculty in 2008.
+      </p>
+      <p>
+        The Wright laboratory uses quantitative mass spectrometry and proximity-labeling
+        proteomics to map subcellular protein&ndash;protein interaction networks in preclinical
+        models of human disease, with a particular focus on androgen receptor (AR)&ndash;driven
+        diseases such as prostate cancer. The lab is interested in how signaling complexes
+        coordinate cellular proliferation, cell death, and differentiation &mdash; and in
+        identifying druggable receptors that can selectively trigger latent cell-death pathways
+        or promote growth arrest through differentiation.
+      </p>
+      <p>
+        Bridging classical biochemistry with modern proteomic platforms, the lab develops novel
+        proximity-labeling enzymes for capturing post-translational modifications in complex
+        matrices, builds reagents and methods that make protein-complex interrogation more
+        reproducible, and applies these tools to mechanistic questions in disease biology.
+      </p>
+
+      <h2>Training</h2>
+      <ul class="cv-list">
+        <li><strong>Postdoctoral Fellow</strong> &mdash; Institute for Systems Biology, Seattle, WA. Laboratory of Ruedi Aebersold.</li>
+        <li><strong>PhD, Molecular and Cellular Biology</strong> &mdash; University of Washington, Seattle, WA.</li>
+      </ul>
+
+      <h2>Curriculum Vitae</h2>
+      <p>
+        Full CV available upon request &mdash; please email
+        <a href="mailto:michael-e-wright@uiowa.edu">michael-e-wright@uiowa.edu</a>.
+      </p>
+    </div>
+  </main>
+
+  <style>
+    .pi-header {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin: 1.5rem 0 3rem;
+    }
+    .pi-portrait img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(15, 44, 46, 0.15);
+    }
+    .pi-intro h1 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .pi-intro .lead {
+      margin-bottom: 0.5rem;
+    }
+    .pi-body {
+      max-width: 760px;
+    }
+    .cv-list {
+      list-style: none;
+      padding: 0;
+    }
+    .cv-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .cv-list li:last-child { border-bottom: none; }
+
+    @media (max-width: 700px) {
+      .pi-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .pi-portrait {
+        max-width: 280px;
+      }
+    }
+  </style>
+</Layout>

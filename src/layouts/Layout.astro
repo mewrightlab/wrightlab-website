@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Wright Lab — University of Iowa. Quantitative mass spectrometry and proximity-labeling proteomics in preclinical models of human disease." } = Astro.props;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/research/", label: "Research" },
+  { href: "/team/", label: "Team" },
+  { href: "/about/", label: "PI" },
+  { href: "/publications/", label: "Publications" },
+  { href: "/join/", label: "Join Us" },
+  { href: "/database/", label: "Database" },
+  { href: "/contact/", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) => {
+  if (href === "/") return currentPath === "/";
+  return currentPath.startsWith(href);
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-title">
+          Wright Lab
+          <small>University of Iowa</small>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          {navItems.map((item) => (
+            <a href={item.href} class={isActive(item.href) ? "active" : ""}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-brand">
+          <strong>Wright Lab</strong>
+          <p>Quantitative mass spectrometry and proximity-labeling proteomics in preclinical models of human disease.</p>
+          <p style="margin-top: 1rem; font-size: 0.9rem;">
+            Bowen Science Building 5-630<br />
+            51 Newton Road<br />
+            Iowa City, IA 52242
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="/research/">Research</a>
+          <a href="/team/">Team</a>
+          <a href="/publications/">Publications</a>
+          <a href="/database/">Database</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="/join/">Join the Lab</a>
+          <a href="/contact/">Contact</a>
+          <a href="mailto:michael-e-wright@uiowa.edu">michael-e-wright@uiowa.edu</a>
+        </div>
+      </div>
+      <div class="site-footer-bottom">
+        &copy; {new Date().getFullYear()} Wright Lab &middot; University of Iowa &middot; Carver College of Medicine &middot; Department of Molecular Physiology and Biophysics
+      </div>
+    </footer>
+  </body>
+</html>
