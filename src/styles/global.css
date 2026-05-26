@@ -186,8 +186,8 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.7fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
   align-items: center;
 }
 .hero h1 {

@@ -63,10 +63,7 @@ import Layout from "../layouts/Layout.astro";
           <a href="/research/" class="button secondary">Read more</a>
         </div>
         <div class="feature-row-image">
-          <div class="image-placeholder">
-            Focus Area 1 figure
-            <small>(network or pathway diagram)</small>
-          </div>
+          <img src="/images/focus-1-neighborhood.png" alt="Protein neighborhood — a central highlighted protein with proximal partners shown as a network of connected dots" class="feature-image" />
         </div>
       </div>
 
@@ -82,10 +79,7 @@ import Layout from "../layouts/Layout.astro";
           <a href="/research/" class="button secondary">Read more</a>
         </div>
         <div class="feature-row-image">
-          <div class="image-placeholder">
-            Focus Area 2 figure
-            <small>(enzyme structure or labeling schematic)</small>
-          </div>
+          <img src="/images/focus-2-toolkit.png" alt="Cartographer's toolkit — a surveying instrument over a molecular landscape, representing different proximity-labeling enzymes" class="feature-image" />
         </div>
       </div>
 
@@ -101,10 +95,7 @@ import Layout from "../layouts/Layout.astro";
           <a href="/research/" class="button secondary">Read more</a>
         </div>
         <div class="feature-row-image">
-          <div class="image-placeholder">
-            Focus Area 3 figure
-            <small>(method illustration or reagent imagery)</small>
-          </div>
+          <img src="/images/focus-3-resolution.png" alt="Resolution levels — nested concentric zoom from cell population to single protein complex" class="feature-image" />
         </div>
       </div>
     </div>
@@ -132,6 +123,13 @@ import Layout from "../layouts/Layout.astro";
       height: auto;
       border-radius: 12px;
       box-shadow: 0 16px 40px rgba(15, 44, 46, 0.12);
+      display: block;
+    }
+    .feature-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15, 44, 46, 0.10);
       display: block;
     }
   </style>

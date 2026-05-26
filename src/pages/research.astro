@@ -16,10 +16,7 @@ import Layout from "../layouts/Layout.astro";
       Constructing proximity interaction networks for key regulators of cellular proliferation,
       cell death, and cellular differentiation.
     </p>
-    <div class="image-placeholder wide" style="margin: 1.5rem 0;">
-      Focus Area 1 figure
-      <small>(network or pathway diagram &mdash; replace with original)</small>
-    </div>
+    <img src="/images/focus-1-neighborhood.png" alt="Protein neighborhood — a central highlighted protein with proximal partners shown as a network of connected dots" class="research-image" />
     <p class="muted"><em>Full description coming soon.</em></p>
 
     <h2>2. Novel proximity enzymes</h2>
@@ -27,10 +24,7 @@ import Layout from "../layouts/Layout.astro";
       Developing novel proximity-labeling enzymes to capture post-translational modifications
       in complex biological matrices.
     </p>
-    <div class="image-placeholder wide" style="margin: 1.5rem 0;">
-      Focus Area 2 figure
-      <small>(enzyme structure or labeling schematic &mdash; replace with original)</small>
-    </div>
+    <img src="/images/focus-2-toolkit.png" alt="Cartographer's toolkit — a surveying instrument over a molecular landscape, representing different proximity-labeling enzymes" class="research-image" />
     <p class="muted"><em>Full description coming soon.</em></p>
 
     <h2>3. Reagents &amp; methods for cell biology</h2>
@@ -38,10 +32,19 @@ import Layout from "../layouts/Layout.astro";
       Optimizing cell biology reagents and methods to interrogate the molecular function of
       protein complexes.
     </p>
-    <div class="image-placeholder wide" style="margin: 1.5rem 0;">
-      Focus Area 3 figure
-      <small>(method illustration &mdash; replace with original)</small>
-    </div>
+    <img src="/images/focus-3-resolution.png" alt="Resolution levels — nested concentric zoom from cell population to single protein complex" class="research-image" />
     <p class="muted"><em>Full description coming soon.</em></p>
   </main>
+
+  <style>
+    .research-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15, 44, 46, 0.10);
+      display: block;
+      margin: 1.5rem 0;
+    }
+  </style>
 </Layout>
