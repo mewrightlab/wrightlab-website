@@ -1,0 +1,61 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Novel proximity enzymes — Wright Lab">
+  <main class="page">
+    <p class="back"><a href="/research/">&larr; Back to Research</a></p>
+    <span class="section-eyebrow">Research</span>
+    <h1>Novel proximity enzymes</h1>
+    <p class="lead">
+      Engineering enzymes that capture dynamic post-translational modifications in complex biological matrices.
+    </p>
+
+    <p>
+      Standard proximity-labeling enzymes record that two proteins were near one another, but they
+      discard the chemical state of those proteins. Much of the regulatory information in a cell is
+      written in post-translational modifications such as phosphorylation, and that information is
+      lost when a method reports only physical proximity. We have engineered a next-generation of
+      proximity-labeling enzymes and labeling chemistries designed to capture modifications in
+      complex matrices so that dynamic PTMs can be followed spatially and temporally across cellular
+      compartments.
+    </p>
+    <p>
+      In practice, this means fusing a proximity ligase of choice to an affinity domain that
+      recognizes a specific post-translational modification, leading to the construction of a
+      bifunctional proximity ligase enzyme. Once the affinity domain engages its target modification
+      in a complex mixture, the ligase biotinylates the modified protein. Under denaturing
+      streptavidin capture, the biotin-labeled PTM-modified protein is recovered and processed for
+      tandem mass spectrometry analysis. Bifunctional proximity ligases targeting the PTMs of
+      ubiquitination, SUMOylation, N-linked and O-linked glycosylation, ISGylation, and other
+      modifications become a feasible experimental approach to study signal-mediated PTMs on a
+      global scale.
+    </p>
+    <p>
+      We aim to interrogate complex biological stratums such as primary cells, preclinical cell
+      lines, or tissues, where conventional PTM enrichment methods are exceedingly difficult to
+      scale due to limited reagent availability and/or high costs. By extending proximity proteomics
+      from "who is near my target receptor," there is added biological value in understanding how
+      PTM-modified states correlate with receptor-proximal neighborhoods. We predict these reagents
+      will have the power to read signaling events spatially and temporally, rather than inferring
+      PTMs based solely on previously annotated physical interactions.
+    </p>
+
+    <img src="/images/pillar-2-enzymes.svg" alt="Schematic of a bifunctional enzyme (an affinity domain fused to a proximity ligase) that recognizes a post-translational modification, biotinylates the substrate, and enables denaturing streptavidin capture and MS/MS, with a legend of capturable PTMs" class="research-image" />
+
+    <p class="back"><a href="/research/">&larr; Back to Research</a></p>
+  </main>
+
+  <style>
+    .research-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15, 44, 46, 0.10);
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .back { font-size: 0.95rem; margin-bottom: 1rem; }
+  </style>
+</Layout>

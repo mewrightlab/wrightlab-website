@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Claude Code session files
+.claude/
+
+# working editing docs and design sources (not for publish)
+*.docx
+*.afdesign

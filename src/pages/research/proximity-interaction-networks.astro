@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Proximity interaction networks — Wright Lab">
+  <main class="page">
+    <p class="back"><a href="/research/">&larr; Back to Research</a></p>
+    <span class="section-eyebrow">Research</span>
+    <h1>Proximity interaction networks</h1>
+    <p class="lead">
+      Mapping the protein communities that assemble around disease regulators inside living cells.
+    </p>
+
+    <p>
+      Proteins rarely act alone. Instead, they work in transient, tightly organized communities
+      that assemble at the right place and moment to drive a cellular decision. The lab maps these
+      communities directly inside living cells using proximity-labeling proteomics, an approach
+      where an engineered proximity-labeling enzyme is fused to a regulator of interest and tags
+      and maps proximal neighboring proteins that come within a few 100 nanometers. Combining
+      proximity ligase (PL) approaches with quantitative mass spectrometry (qMS) facilitates the
+      identification and quantification of proteins. In effect, it allows cataloging of tagged
+      neighbors to produce a census of the regulator's molecular neighborhood as it exists in the
+      cell.
+    </p>
+    <p>
+      We use PL-qMS to build topological maps and neighborhoods of proximal networks for master
+      regulators of cellular proliferation, cell death, and differentiation in clinical models of
+      human prostate cancer. By resolving the neighborhoods separately in different subcellular
+      compartments and across a signaling time course, we will capture how a receptor's protein
+      community reorganizes as the cell commits to one fate over another. The result is a
+      compartment-resolved, time-resolved interaction map that nominates the specific partners
+      through which a signal is transmitted, and that points to the nodes most worth targeting
+      therapeutically in our effort to disrupt cellular signaling underlying different pathological
+      states in human prostate cancers.
+    </p>
+
+    <img src="/images/pillar-1-networks.svg" alt="Schematic of three prostate-cancer signaling hubs (nuclear receptors, cell-death machinery at the mitochondria, and GPCRs) that are proximity-labeled and converge into a high-dimensional proximal map pointing to candidate druggable targets." class="research-image" />
+
+    <p class="back"><a href="/research/">&larr; Back to Research</a></p>
+  </main>
+
+  <style>
+    .research-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15, 44, 46, 0.10);
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .back { font-size: 0.95rem; margin-bottom: 1rem; }
+  </style>
+</Layout>

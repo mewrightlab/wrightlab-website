@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Reagents and methods for cell biology — Wright Lab">
+  <main class="page">
+    <p class="back"><a href="/research/">&larr; Back to Research</a></p>
+    <span class="section-eyebrow">Research</span>
+    <h1>Reagents &amp; methods for cell biology</h1>
+    <p class="lead">
+      Optimizing the reagents and assays that screen and functionally validate proximal interactions.
+    </p>
+
+    <p>
+      Discovering a proximal interaction is only the beginning because signaling hubs tend to be
+      sticky receptors and thus contain many proximal neighbors. To get a handle on whether a
+      proximal partner impacts a receptor's function, one must optimize and scale cell-biology
+      reagents and assays that can interrogate proximity neighborhoods quickly and robustly, as
+      testable functional hypotheses. We leverage CRISPR screening to ablate proximal partner
+      expression, followed by ascertainment of receptor function. We have also invested in low-cost
+      secondary UnFold probes to facilitate the high-throughput implementation of proximity ligation
+      assays to confirm proximal interactions in situ. Lastly, we are implementing gene-editing and
+      fluorescence microscopy tools to validate proximal interactions in live cells.
+    </p>
+    <p>
+      The goal of this workflow is to ascertain the function of proximal neighbors through gene
+      perturbations and proximal verification of native cellular context, so that proximal
+      interactions discovered by PL-qMS are prioritized based on experimental evidence rather than
+      proximity alone. Overall, our approaches and reagents will facilitate the high-throughput
+      screening and functional validation of the proximal interaction networks (PINs) in my
+      laboratory. Construction of PINs will drive the generation and testing of new hypotheses
+      regarding the function of proximal proteomes underlying signal-mediated transduction pathways.
+    </p>
+
+    <img src="/images/pillar-3-methods.svg" alt="Schematic of reagents (CRISPR, UnFold proximity ligation assay, and fluorescence microscopy) that converge on high-throughput screening and in situ functional validation of proximal interactomes" class="research-image" />
+
+    <p class="back"><a href="/research/">&larr; Back to Research</a></p>
+  </main>
+
+  <style>
+    .research-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15, 44, 46, 0.10);
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .back { font-size: 0.95rem; margin-bottom: 1rem; }
+  </style>
+</Layout>

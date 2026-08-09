@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Research — Wright Lab">
+  <main class="page">
+    <span class="section-eyebrow">Research</span>
+    <h1>Focus areas of the Wright Lab</h1>
+    <p class="lead">
+      The lab is organized around three interconnected lines of inquiry that together aim to map
+      the molecular logic of cellular signaling in disease.
+    </p>
+
+    <section class="pillar">
+      <h2>1. Proximity interaction networks</h2>
+      <p>
+        We map the protein communities that assemble around disease regulators inside living cells,
+        with a focus on the androgen receptor and other signaling hubs in prostate cancer.
+      </p>
+      <img src="/images/pillar-1-networks.svg" alt="Schematic of three prostate-cancer signaling hubs (nuclear receptors, cell-death machinery at the mitochondria, and GPCRs) that are proximity-labeled and converge into a high-dimensional proximal map pointing to candidate druggable targets" class="research-image" />
+      <a href="/research/proximity-interaction-networks/" class="button secondary">Read more</a>
+    </section>
+
+    <section class="pillar">
+      <h2>2. Novel proximity enzymes</h2>
+      <p>
+        We have engineered a suite of bifunctional proximity-labeling enzymes that capture
+        post-translational modifications in space and time so specific PTMs can be globally
+        annotated in complex protein mixtures to facilitate the resolution of signal-mediated
+        PTMs spatially and temporally in cells and tissues.
+      </p>
+      <img src="/images/pillar-2-enzymes.svg" alt="Schematic of a bifunctional enzyme (an affinity domain fused to a proximity ligase) that recognizes a post-translational modification, biotinylates the substrate, and enables denaturing streptavidin capture and MS/MS, with a legend of capturable PTMs" class="research-image" />
+      <a href="/research/novel-proximity-enzymes/" class="button secondary">Read more</a>
+    </section>
+
+    <section class="pillar">
+      <h2>3. Reagents &amp; methods for cell biology</h2>
+      <p>
+        We optimize the reagents and assays, from CRISPR to in situ proximity ligation and imaging,
+        that let us screen and functionally validate proximal interactions in cells.
+      </p>
+      <img src="/images/pillar-3-methods.svg" alt="Schematic of reagents (CRISPR, UnFold proximity ligation assay, and fluorescence microscopy) that converge on high-throughput screening and in situ functional validation of proximal interactomes" class="research-image" />
+      <a href="/research/reagents-and-methods/" class="button secondary">Read more</a>
+    </section>
+  </main>
+
+  <style>
+    .research-image {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15, 44, 46, 0.10);
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .pillar { margin-bottom: 3.5rem; }
+    .pillar:last-child { margin-bottom: 0; }
+  </style>
+</Layout>

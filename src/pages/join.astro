@@ -6,10 +6,85 @@ import Layout from "../layouts/Layout.astro";
   <main class="page">
     <span class="section-eyebrow">Join Us</span>
     <h1>Open positions and how to apply</h1>
-    <p class="lead">We welcome motivated trainees and collaborators interested in proteomics and disease biology.</p>
+    <p class="lead">
+      We welcome motivated trainees and collaborators who want to work at the intersection of
+      quantitative proteomics, cell biology, and disease mechanism.
+    </p>
 
-    <p class="muted"><em>Recruitment details coming soon.</em></p>
+    <div class="callout">
+      <p class="callout-title">The lab is actively recruiting.</p>
+      <p>
+        This is a ground-floor opportunity to help build a new research program from its earliest
+        stage, with room to shape projects, take real ownership, and publish first-author work. We
+        are currently looking for graduate students, postdoctoral researchers, and rotation students.
+      </p>
+    </div>
 
-    <p>Interested in joining? Please reach out via the <a href="/contact/">Contact page</a>.</p>
+    <h2>What we look for</h2>
+    <p>
+      The lab brings together wet-lab biochemistry, mass-spectrometry proteomics, and computational
+      analysis. The strongest applicants are curious about more than one of these areas and are
+      eager to learn the others. No single background is required, and we welcome applicants from
+      molecular biology, biochemistry, analytical chemistry, and computational backgrounds. What
+      matters most is rigor, persistence, and a genuine interest in how signaling complexes govern
+      cell fate.
+    </p>
+
+    <h2>Graduate students</h2>
+    <p>
+      Prospective PhD students should apply through the relevant University of Iowa graduate program
+      and are encouraged to arrange a laboratory rotation. Students in the lab take ownership of a
+      project that spans experimental design, proteomic data generation, and analysis, and are
+      supported in presenting at national meetings and publishing first-author work. If you are
+      unsure which graduate program is the best fit, email us and we will help you find out.
+    </p>
+
+    <h2>Postdoctoral researchers</h2>
+    <p>
+      We consider postdoctoral applicants who hold a doctoral degree and have a track record in one
+      or more of proteomics, mass spectrometry, protein biochemistry, cell biology, or computational
+      biology. Postdocs are mentored toward independence, with the goal of building a distinct
+      research program and a competitive record for the next career stage. To apply, email a cover
+      letter describing your research interests, a CV, and the names of three references.
+    </p>
+
+    <h2>Undergraduate and rotation students</h2>
+    <p>
+      Undergraduates and rotating graduate students are welcome and are paired with a mentor and a
+      well-scoped project. Reach out early, since positions are limited by available bench space and
+      mentoring capacity.
+    </p>
+
+    <h2>Collaborators</h2>
+    <p>
+      We partner with laboratories that want to apply proximity-labeling proteomics to their own
+      systems, and with groups developing complementary methods. If your question involves the
+      composition or dynamics of a protein complex in a disease model, we would be glad to talk.
+    </p>
+
+    <h2>How to apply</h2>
+    <p>
+      Email
+      <a href="mailto:michael-e-wright@uiowa.edu">michael-e-wright@uiowa.edu</a>
+      with a short note about your interests and background, and attach a CV. Full contact details
+      are on the <a href="/contact/">Contact page</a>.
+    </p>
   </main>
+
+  <style>
+    .callout {
+      background: rgba(10, 165, 164, 0.08);
+      border-left: 4px solid var(--color-accent, #0aa5a4);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0 2.5rem;
+    }
+    .callout-title {
+      font-weight: 700;
+      color: var(--color-text, inherit);
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+  </style>
 </Layout>

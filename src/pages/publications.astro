@@ -1,13 +1,140 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const preprints = [
+  {
+    authors: ["Celeste C. Ptak", "Conor O'Rourke", "Jimmy K. Eng", "Lilliana Radoshevich", "Michael E. Wright"],
+    title: "A Spatiotemporal Atlas of Extranuclear Androgen Receptor Proximal Interaction Networks",
+    venue: "bioRxiv",
+    year: "2026",
+    doi: "10.64898/2026.08.03.742469",
+  },
+  {
+    authors: ["Celeste C. Ptak", "Jimmy K. Eng", "Lilliana Radoshevich", "Michael E. Wright"],
+    title: "A Temporal Atlas of the Nuclear Androgen Receptor Proximal Interactome",
+    venue: "bioRxiv",
+    year: "2026",
+    doi: "10.64898/2026.08.03.742470",
+  },
+  {
+    authors: ["Jimmy K. Eng", "Lilliana Radoshevich", "Michael E. Wright"],
+    title: "Short Linear Motifs as a General Organizing Principle of the Nuclear-Receptor Proximal Interactome",
+    venue: "bioRxiv",
+    year: "2026",
+    doi: "10.64898/2026.08.06.743235",
+  },
+  {
+    authors: ["Jimmy K. Eng", "Michael E. Wright"],
+    title: "SYNTAX Reads the Motif and Domain Grammar of the Androgen Receptor Proximal Interactome",
+    venue: "bioRxiv",
+    year: "2026",
+    doi: "10.64898/2026.08.06.743244",
+  },
+];
 ---
 
 <Layout title="Publications — Wright Lab">
   <main class="page">
     <span class="section-eyebrow">Publications</span>
-    <h1>Selected peer-reviewed publications</h1>
-    <p class="lead">A curated list of recent and notable work from the Wright Lab.</p>
+    <h1>Publications and preprints</h1>
+    <p class="lead">
+      Recent work from the Wright Lab. Manuscripts posted as preprints are listed below, and
+      peer-reviewed versions will be linked here as they appear.
+    </p>
 
-    <p class="muted"><em>Publication list coming soon. In the meantime, see <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>.</em></p>
+    <section class="pub-group">
+      <h2>Preprints</h2>
+      <ol class="pub-list">
+        {preprints.map((p) => (
+          <li class="pub">
+            <p class="pub-authors">
+              {p.authors.map((a, i) => (
+                <span class={a === "Michael E. Wright" ? "me" : ""}>
+                  {a}{i < p.authors.length - 1 ? ", " : ""}
+                </span>
+              ))}
+            </p>
+            <p class="pub-title">
+              <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener">{p.title}</a>
+            </p>
+            <p class="pub-meta">
+              <span class="badge">Preprint</span>
+              <span><em>{p.venue}</em> ({p.year})</span>
+              <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener">doi.org/{p.doi}</a>
+            </p>
+          </li>
+        ))}
+      </ol>
+    </section>
   </main>
+
+  <style>
+    .pub-group { margin-top: 2.5rem; }
+    .pub-group h2 {
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-text-muted);
+      border-bottom: 1px solid rgba(15, 44, 46, 0.12);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: pub;
+    }
+    .pub {
+      position: relative;
+      padding: 0 0 1.75rem 2.5rem;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid rgba(15, 44, 46, 0.08);
+    }
+    .pub:last-child { border-bottom: none; margin-bottom: 0; }
+    .pub::before {
+      counter-increment: pub;
+      content: counter(pub);
+      position: absolute;
+      left: 0;
+      top: 0.05rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: var(--color-accent, #0aa5a4);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .pub-authors { margin: 0 0 0.35rem; color: var(--color-text-muted); font-size: 0.98rem; }
+    .pub-authors .me { color: var(--color-text, inherit); font-weight: 700; }
+    .pub-title { margin: 0 0 0.5rem; font-size: 1.08rem; font-weight: 600; line-height: 1.35; }
+    .pub-title a { color: var(--color-text, inherit); text-decoration: none; }
+    .pub-title a:hover { text-decoration: underline; color: var(--color-accent, #0aa5a4); }
+    .pub-meta {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.9rem;
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+    }
+    .pub-meta a { color: var(--color-accent, #0aa5a4); text-decoration: none; }
+    .pub-meta a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-accent, #0aa5a4);
+      background: rgba(10, 165, 164, 0.12);
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+    }
+  </style>
 </Layout>
