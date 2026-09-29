@@ -5,6 +5,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://mewrightlab.org',
   trailingSlash: 'always',
+  redirects: {
+    '/research/proximity-interaction-networks/': '/research/proximal-interaction-networks/',
+  },
   build: {
     format: 'directory',
   },
